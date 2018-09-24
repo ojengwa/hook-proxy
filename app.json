@@ -1,9 +1,10 @@
 {
     "name": "Hook Proxy",
     "description": "Simple hook for integrating 3rd-party APIs",
-    "repository": "https://github.com:ojengwa/hook-proxy",
+    "repository": "https://github.com/ojengwa/hook-proxy",
     "logo": "https://www.proxysite.com/assets/images/privacy.png",
     "keywords": ["proxy", "api", "webhook"],
+    "image": "heroku/nodejs",
     "env": {
         "TRELLO_KEY": {
             "description": "Developer's Trello key. Obtain one at https://trello.com/app-key",
