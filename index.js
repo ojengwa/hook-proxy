@@ -51,6 +51,12 @@ server.post('/hooks/codacy/twilio', (req, res, next) => {
     return next();
 });
 
+server.post('/hooks/twilio/callback', (req, res, next) => {
+
+    res.status(200)
+    return next();
+});
+
 server.listen(process.env.PORT || 5000, function() {
     console.log('%s listening', server.name);
 });
