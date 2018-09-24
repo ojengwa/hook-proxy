@@ -9,7 +9,7 @@ const server = restify.createServer({
 
 server.use(restify.bodyParser());
 
-server.post('/hooks/codacy/twilio', (req, res, next) => {
+server.post('/hooks/codacy/trello', (req, res, next) => {
     const TRELLO_KEY = process.env.TRELLO_KEY;
 
     try {
@@ -51,9 +51,9 @@ server.post('/hooks/codacy/twilio', (req, res, next) => {
     return next();
 });
 
-server.post('/hooks/twilio/callback', (req, res, next) => {
+server.post('/hooks/trello/callback', (req, res, next) => {
 
-    res.status(200)
+    res.send({});
     return next();
 });
 
