@@ -9,6 +9,10 @@
         "TRELLO_KEY": {
             "description": "Developer's Trello key. Obtain one at https://trello.com/app-key",
             "required": true
+        },
+        "TRELLO_TOKEN": {
+            "description": "Developer's Trello key. Obtain one at https://trello.com/app-key",
+            "required": true
         }
     }
 }

@@ -11,43 +11,10 @@ server.use(restify.bodyParser());
 
 server.post('/hooks/codacy/trello', (req, res, next) => {
     const TRELLO_KEY = process.env.TRELLO_KEY;
+    const TRELLO_TOKEN = process.env.TRELLO_TOKEN;
 
-    try {
 
-        if (req.body) {
-            var requestBody = req.body;
-
-            if (requestBody.result) {
-                speech = '';
-
-                if (requestBody.result.fulfillment) {
-                    speech += requestBody.result.fulfillment.speech;
-                    speech += ' ';
-                }
-
-                if (requestBody.result.action) {
-                    speech += 'action: ' + requestBody.result.action;
-                }
-            }
-        }
-
-        res.send({
-            speech: speech,
-            displayText: speech,
-            source: 'telemundo'
-        });
-
-    } catch (err) {
-
-        res.send(400, {
-            status: {
-                code: 400,
-                errorType: err.message
-            }
-        });
-
-    }
-
+    res.send({});
     return next();
 });
 
