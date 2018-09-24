@@ -1,0 +1,29 @@
+{
+  "name": "hook-proxy",
+  "version": "1.0.0",
+  "description": "Simple hook for integrating 3rd-party APIs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:ojengwa/hook-proxy.git"
+  },
+  "keywords": [
+    "proxy",
+    "api",
+    "webhook"
+  ],
+  "author": "Bernard Ojengwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com:ojengwa/hook-proxy/issues"
+  },
+  "homepage": "https://github.com:ojengwa/hook-proxy#readme",
+  "dependencies": {
+    "request": "^2.88.0",
+    "restify": "^4.3.0"
+  }
+}
