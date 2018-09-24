@@ -13,8 +13,9 @@ server.post('/hooks/codacy/trello', (req, res, next) => {
     const TRELLO_KEY = process.env.TRELLO_KEY;
     const TRELLO_TOKEN = process.env.TRELLO_TOKEN;
 
+    console.log(req.headers.host);
 
-    res.send({});
+    res.send(req.headers.host);
     return next();
 });
 
