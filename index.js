@@ -13,13 +13,14 @@ server.post('/hooks/codacy/trello', (req, res, next) => {
     const TRELLO_KEY = process.env.TRELLO_KEY;
     const TRELLO_TOKEN = process.env.TRELLO_TOKEN;
 
-    console.log(req.headers.host);
+    const CALLBACK_URL = `https://${req.headers.host}/callbacks/trello`;
+    console.log(req.params);
 
-    res.send(req.headers.host);
+    res.send(CALLBACK_URL);
     return next();
 });
 
-server.post('/hooks/trello/callback', (req, res, next) => {
+server.post('/callbacks/trello', (req, res, next) => {
 
     res.send({});
     return next();
