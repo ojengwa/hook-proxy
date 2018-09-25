@@ -13,7 +13,7 @@ server.post('/hooks/codacy/trello', (req, res, next) => {
     const TRELLO_API_KEY = process.env.TRELLO_KEY;
     const TRELLO_API_TOKEN = process.env.TRELLO_TOKEN;
     const TRELLO_API_URL = `https://api.trello.com/1/cards?key=${TRELLO_API_KEY}&token=${TRELLO_API_TOKEN}`;
-    const BOARD_LIST_ID = '5ba6a9f407c57d6b9cc105c2'
+    const BOARD_LIST_ID = '5ba6a9f407c57d6b9cc105c2';
 
     const payload = {
         name: '',
@@ -22,6 +22,8 @@ server.post('/hooks/codacy/trello', (req, res, next) => {
         idList: BOARD_LIST_ID,
         idLabels: 'Bug',
     }
+    console.log(payload, 'payload');
+
     const options = {
         url: TRELLO_API_URL,
         'method': 'POST',
