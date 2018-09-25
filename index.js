@@ -26,8 +26,8 @@ server.post('/hooks/codacy/trello', (req, res, next) => {
 
     const options = {
         url: TRELLO_API_URL,
-        'method': 'POST',
-        data: payload
+        method: 'POST',
+        form: payload
     }
 
     request(options, function(error, response, body) {
