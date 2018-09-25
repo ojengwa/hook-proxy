@@ -22,15 +22,13 @@ server.post('/hooks/codacy/trello', (req, res, next) => {
         idList: BOARD_LIST_ID,
         idLabels: 'Bug',
     }
-    console.log(payload, 'payload');
 
     const options = {
         url: TRELLO_API_URL,
-        method: 'POST',
-        form: payload
+        json: payload
     }
 
-    request(options, function(error, response, body) {
+    request.post(options, function(error, response, body) {
         if (error) throw new Error(error);
 
         res.send(body);
